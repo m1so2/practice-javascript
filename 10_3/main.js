@@ -1,11 +1,11 @@
 //クリックされたら動作
 
 function errorInput(){
-    console.log(document.getElementById("month"))
-    console.log(document.getElementById("day"))
+    console.log(document.getElementById("month").value)
+    console.log(document.getElementById("day").value)
 
-    const month = docment.getElementById("month").value;
-    const day = docment.getElementById("day").value;
+    const month = document.getElementById("month").value;
+    const day = document.getElementById("day").value;
 
     console.log("month:",month,"day:",day)
 
