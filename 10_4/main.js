@@ -8,3 +8,14 @@ function errorInput(){
     console.log("month:",month,"day:",day)
 
 }
+
+const monthSelect = document.getElementById("month");
+monthSelectList();
+function monthSelect(){
+    for(let i=1;i<12;l++){
+        let option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        monthSelect.appendChild(option);
+    }
+}
