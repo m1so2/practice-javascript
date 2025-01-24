@@ -41,14 +41,30 @@ ClickCounterGame();
 function startNumberGuessGame(){
     const gameContainer = document.getElementById("game-container")
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-    let messsage = document.createElement("p");
-    messsage.textContent = randomNumber;
+    let message = document.createElement("p");
     let input = document.createElement("input");
-    input.type ='number';
+    input.type ="number";
     input.placeholder = "好きな数字を入力してください (1 ~ 100)";
-    gameContainer.appendChild(messsage);
+    gameContainer.appendChild(message);
     gameContainer.appendChild(input);
+
+    let button = document.createElement("button")
+        button.textContent = "確定";
+
+        button.addEventListener("click",function(){
+            const val = parseInt(input.value);
+            if(randomNumber == val){
+                message.textContent = "正解"
+            }else if(randomNumber < val){
+                message.textContent = "大きい"
+            }else{
+                message.textContent = "小さい"
+            }
+        })
+
+        gameContainer.appendChild(button);
 }
+
 startNumberGuessGame();
 
 
